@@ -87,14 +87,9 @@ body {
 	flex-shrink: 0;
 }
 
-.navigation a:hover {
+.navigation > div > a:hover {
 	transition: margin-bottom 0.03s ease-in;
 	margin-bottom: 5px;
-}
-
-.nagivation a:active,
-.navigation a:focus {
-	margin-bottom: 0;
 }
 
 .navigation:not(.small-screen-nav) > div:first-child {
