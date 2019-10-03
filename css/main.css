@@ -45,7 +45,7 @@ body {
 #logo {
 	height: 40px;
 	max-width: auto;
-	padding-left: 20px;
+	margin-left: 20px;
 }
 
 .navigation:not(.small-screen-nav) {
@@ -58,7 +58,7 @@ body {
 	align-items: center;
 	justify-content: space-between;
 	box-sizing: border-box;
-	padding-right: 20px;
+	margin-right: 20px;
 	height: 100%;
 	color: white;
 }
@@ -87,12 +87,13 @@ body {
 	flex-shrink: 0;
 }
 
-.navigation a {
+.navigation a:hover {
 	transition: margin-bottom 0.03s ease-in;
+	margin-bottom: 5px;
 }
 
-.navigation a:hover {
-	margin-bottom: 5px;
+.nagivation a:active {
+	margin-bottom: 0;
 }
 
 .navigation:not(.small-screen-nav) > div:first-child {
@@ -177,11 +178,11 @@ body {
 	}
 
 	#logo {
-		padding-left: 100px;
+		margin-left: 100px;
 	}
 
 	.navigation {
 		width: 60%;
-		padding-right: 100px;
+		margin-right: 100px;
 	}
 }
