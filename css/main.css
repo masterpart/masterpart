@@ -43,7 +43,7 @@ body {
 }
 
 #logo {
-	height: 35px;
+	height: 40px;
 	max-width: auto;
 	margin-left: 20px;
 }
@@ -98,8 +98,8 @@ body {
 
 #header-img,
 #header-img-sm {
-	max-width: 100%;
-	max-height: auto;
+	width: 100%;
+	height: auto;
 	display: block;
 }
 
