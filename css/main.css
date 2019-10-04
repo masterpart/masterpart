@@ -54,10 +54,11 @@ section {
 	height: 44px;
 }
 
-.fa-truck {
+.truck {
 	animation-duration: 0.3s;
 	animation-name: truck-animation;
 	animation-iteration-count: infinite;
+	height: 40px;
 }
 
 @keyframes truck-animation {
@@ -68,11 +69,6 @@ section {
 	to {
 		margin-top: 4px;
 	}
-}
-
-.fa-truck {
-	height: 40px;
-	width: auto;
 }
 
 #ground-line {
@@ -90,7 +86,7 @@ section {
 	height: 100%;
 	width: 200px;
 	color: green;
-	animation-duration: 1s;
+	animation-duration: 1.5s;
 	animation-iteration-count: infinite;
 	animation-timing-function: linear;
 }
@@ -110,6 +106,7 @@ section {
 }
 
 #background1 {
+	margin-left: 100%;
 	animation-name: bg-animation-1;
 }
 
@@ -123,12 +120,11 @@ section {
 	}
 }
 
-.fa-tree {
+.tree {
 	height: 38px;
-	width: auto;
 	margin-top: 4px;
-	margin-left: 14px;
-	margin-right: 14px;
+	margin-left: 18px;
+	margin-right: 18px;
 }
 
 /* END LOADING */
