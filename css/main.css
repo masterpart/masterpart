@@ -2,6 +2,7 @@ body {
 	margin: 0;
 	font-size: 10px;
 	min-width: 280px;
+	overflow: hidden;
 }
 
 @font-face {
@@ -17,6 +18,120 @@ body {
     font-weight:normal;
     font-style:normal
 }
+
+/* Hide everything while loading */
+nav,
+section {
+	visibility: hidden;
+}
+
+.center-flex {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+/* LOADING */
+
+#loading {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background: rgb(32,32,32);
+}
+
+#loading-truck {
+	margin: 0;
+	width: 200px;
+	height: 45px;
+	color: white;
+	text-align: center;
+	position: relative;
+	overflow: hidden;
+}
+
+#fa-truck-wrapper {
+	height: 44px;
+}
+
+.fa-truck {
+	animation-duration: 0.3s;
+	animation-name: truck-animation;
+	animation-iteration-count: infinite;
+}
+
+@keyframes truck-animation {
+	from {
+		margin-top: 0;
+	}
+
+	to {
+		margin-top: 4px;
+	}
+}
+
+.fa-truck {
+	height: 40px;
+	width: auto;
+}
+
+#ground-line {
+	width: 100%;
+	height: 1px;
+	background: white;
+	background: brown;
+}
+
+.bg {
+	z-index: -1;
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 200px;
+	color: green;
+	animation-duration: 1s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+
+#background {
+	animation-name: bg-animation;
+}
+
+@keyframes bg-animation {
+	from {
+		left: 0;
+	}
+
+	to {
+		left: -100%;
+	}
+}
+
+#background1 {
+	animation-name: bg-animation-1;
+}
+
+@keyframes bg-animation-1 {
+	from {
+		margin-left: 100%;
+	}
+
+	to {
+		margin-left: 0;
+	}
+}
+
+.fa-tree {
+	height: 38px;
+	width: auto;
+	margin-top: 4px;
+	margin-left: 14px;
+	margin-right: 14px;
+}
+
+/* END LOADING */
 
 .bold-font {
 	font-family:"proxima_nova_softbold",sans-serif;
