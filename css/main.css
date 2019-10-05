@@ -273,7 +273,7 @@ section {
 
 .particle {
 	position: absolute;
-	left: 0px;
+	left: -1px;
 	top: 10%;
 	width: 1px;
 	height: 1px;
