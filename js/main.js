@@ -13,11 +13,13 @@ var nav = document.querySelector('nav'),
   particle = document.querySelector('.particle'),
   headerImageWrapper = document.querySelector('#header-image-wrapper');
 
-var pAnimDuration = 5000,
+
+
+var pAnimDuration = 2500,
   pAnimMinWait = 4000,
   pAnimMaxWait = 8000,
   pAnimMinDuration = 2500,
-  pAnimMaxDuration = 8000;
+  pAnimMaxDuration = 3500;
 
 function getRndInteger(min, max) {
   return Math.floor(Math.random() * (max - min) ) + min;
