@@ -255,7 +255,7 @@ section {
 
 .fade-in {
 	animation-name: fade-in;
-	animation-duration: 1s;
+	animation-duration: 0.8s;
 	animation-iteration-count: 1;
 }
 
@@ -289,11 +289,13 @@ section {
 
 @keyframes particleAnimation {
 	from {
-		left: calc(30% - 40px);
+		left: 30%;
+		margin-left: 0;
 	}
 
 	to {
-		left: calc(100% + 40px);
+		left: 100%;
+		margin-left: 40px;
 	}
 }
 
@@ -317,14 +319,16 @@ section {
 	}
 
 	@keyframes particleAnimation {
-	from {
-		left: calc(30% - 100px);
-	}
+		from {
+			left: 30%;
+			margin-left: 0;
+		}
 
-	to {
-		left: calc(100% + 100px);
+		to {
+			left: 100%;
+			margin-left: 100px;
+		}
 	}
-}
 }
 
 /* End Particle Animation */
