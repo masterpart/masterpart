@@ -29,15 +29,20 @@ function randomizeParticle() {
   particle.style.animationDuration = pAnimDuration/1000 + 's';
 }
 
+function cloneToRestartAnimation() {
+  var clone = particle.cloneNode(true);
+  headerImageWrapper.removeChild(particle);
+  headerImageWrapper.appendChild(clone);
+  particle = document.querySelector('.particle');
+}
+
 function restartParticleAnimation() {
+  var rndInt = getRndInteger(pAnimMinWait, pAnimMaxWait);
   setTimeout(function() {
-    var clone = particle.cloneNode(true);
-    headerImageWrapper.removeChild(particle);
-    headerImageWrapper.appendChild(clone);
-    particle = document.querySelector('.particle');
     randomizeParticle();
+    cloneToRestartAnimation();
     waitParticleAnimation(pAnimDuration);
-  }, getRndInteger(pAnimMinWait, pAnimMaxWait));
+  }, rndInt);
 }
 
 function waitParticleAnimation(duration) {
