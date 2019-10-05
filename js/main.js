@@ -36,18 +36,18 @@ function cloneToRestartAnimation() {
   particle = document.querySelector('.particle');
 }
 
+function waitParticleAnimation(duration) {
+  setTimeout(function() {
+    restartParticleAnimation();
+  }, duration);
+}
+
 function restartParticleAnimation() {
   setTimeout(function() {
     randomizeParticle();
     cloneToRestartAnimation();
     waitParticleAnimation(pAnimDuration);
   }, getRndInteger(pAnimMinWait, pAnimMaxWait));
-}
-
-function waitParticleAnimation(duration) {
-  setTimeout(function() {
-    restartParticleAnimation();
-  }, duration);
 }
 
 function revealWebsite() {
