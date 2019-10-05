@@ -317,14 +317,14 @@ section {
 	}
 
 	@keyframes particleAnimation {
-	from {
-		left: calc(30% - 105px);
-	}
+		from {
+			left: calc(30% - 105px);
+		}
 
-	to {
-		left: calc(100% + 105px);
+		to {
+			left: calc(100% + 105px);
+		}
 	}
-}
 }
 
 /* End Particle Animation */
