@@ -37,12 +37,11 @@ function cloneToRestartAnimation() {
 }
 
 function restartParticleAnimation() {
-  var rndInt = getRndInteger(pAnimMinWait, pAnimMaxWait);
   setTimeout(function() {
     randomizeParticle();
     cloneToRestartAnimation();
     waitParticleAnimation(pAnimDuration);
-  }, rndInt);
+  }, getRndInteger(pAnimMinWait, pAnimMaxWait));
 }
 
 function waitParticleAnimation(duration) {
