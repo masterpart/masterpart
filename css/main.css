@@ -289,11 +289,11 @@ section {
 
 @keyframes particleAnimation {
 	from {
-		left: calc(30% - 100px);
+		left: calc(30% - 45px);
 	}
 
 	to {
-		left: calc(100% + 100px);
+		left: calc(100% + 45px);
 	}
 }
 
@@ -315,6 +315,16 @@ section {
 	.particle:before {
 		width: 100px;
 	}
+
+	@keyframes particleAnimation {
+	from {
+		left: calc(30% - 105px);
+	}
+
+	to {
+		left: calc(100% + 105px);
+	}
+}
 }
 
 /* End Particle Animation */
