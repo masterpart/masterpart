@@ -8,7 +8,43 @@
 
 var nav = document.querySelector('nav'),
   sections = document.querySelectorAll('section'),
-  loading = document.querySelector('#loading');
+  loading = document.querySelector('#loading'),
+  logoCentered = document.querySelector('#header-img-center'),
+  particle = document.querySelector('.particle'),
+  headerImageWrapper = document.querySelector('#header-image-wrapper');
+
+var pAnimDuration = 5000,
+  pAnimMinWait = 4000,
+  pAnimMaxWait = 8000,
+  pAnimMinDuration = 2500,
+  pAnimMaxDuration = 8000;
+
+function getRndInteger(min, max) {
+  return Math.floor(Math.random() * (max - min) ) + min;
+}
+
+function randomizeParticle() {
+  particle.style.top = getRndInteger(3, 12) + '%';
+  pAnimDuration = getRndInteger(pAnimMinDuration, pAnimMaxDuration);
+  particle.style.animationDuration = pAnimDuration/1000 + 's';
+}
+
+function restartParticleAnimation() {
+  setTimeout(function() {
+    var clone = particle.cloneNode(true);
+    headerImageWrapper.removeChild(particle);
+    headerImageWrapper.appendChild(clone);
+    particle = document.querySelector('.particle');
+    randomizeParticle();
+    waitParticleAnimation(pAnimDuration);
+  }, getRndInteger(pAnimMinWait, pAnimMaxWait));
+}
+
+function waitParticleAnimation(duration) {
+  setTimeout(function() {
+    restartParticleAnimation();
+  }, duration);
+}
 
 function revealWebsite() {
   nav.style.visibility = 'visible';
@@ -20,6 +56,12 @@ function revealWebsite() {
   document.body.style.overflow = 'auto';
 
   loading.style.display = 'none';
+
+  logoCentered.classList.add('fade-in');
+
+  // start the animation
+  particle.classList.add('particle-animation');
+  waitParticleAnimation(pAnimDuration);
 }
 
 imagesLoaded(document.body, function() {
