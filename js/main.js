@@ -22,15 +22,7 @@ function revealWebsite() {
   loading.style.display = 'none';
 }
 
-var header_img;
-
-if (window.matchMedia('(min-width: 700px)').matches) {
-  header_img = document.querySelector('#header-img');
-} else {
-  header_img = document.querySelector('#header-img-sm');
-}
-
-imagesLoaded(header_img, function() {
+imagesLoaded(document.body, function() {
   var fontawesomeLoaded = setInterval(function() {
     if (
       document.
