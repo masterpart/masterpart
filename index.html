@@ -45,8 +45,7 @@
 			var tree = background.querySelector('.tree');
 
 			for (var i = 0; i < 2; i++) {
-				var clone = tree.cloneNode(true);
-				background.appendChild(clone);
+				background.appendChild(tree.cloneNode(true));
 			}
 
 			background.style.display = 'inline-block';
@@ -74,10 +73,12 @@
 		</div>
 	</nav>
 
-	<section id="header-images">
+	<section id="header-image-wrapper">
 		<img id="header-img" src="./images/header.jpg" />
 		<img id="header-img-sm" src="./images/header_sm_final.jpg" />
 		<img id="header-img-center" src="./images/Master Part Logo Text White.svg" />
+
+		<div class="particle"></div>
 	</section>
 
 	<script src="./js/main.js"></script>
