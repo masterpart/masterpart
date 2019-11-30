@@ -191,13 +191,13 @@ section {
 	color: white;
 }
 
-.navigation div {
+.navigation > div {
 	display: inline-flex;
 	align-items: center;
 	height: 100%;
 }
 
-.navigation div svg {
+.navigation > div > svg {
 	font-size: 2em;
 }
 
